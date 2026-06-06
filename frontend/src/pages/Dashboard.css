@@ -1,0 +1,20 @@
+.dashboard { max-width: 1100px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; animation: fadeUp .45s ease both; }
+.dash-inner { display: grid; grid-template-columns: 260px 1fr; gap: 1.5rem; align-items: start; }
+.dash-sidebar { display: flex; flex-direction: column; gap: 1.2rem; position: sticky; top: 72px; }
+.sidebar-section { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 1rem; display: flex; flex-direction: column; gap: .75rem; }
+.sidebar-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--text3); }
+.pdf-info { display: flex; flex-direction: column; gap: .65rem; }
+.pdf-info-top { display: flex; align-items: flex-start; gap: .55rem; }
+.pdf-icon  { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.pdf-meta  { overflow: hidden; }
+.pdf-name  { font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pdf-pages { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.btn-remove { background: rgba(255,95,87,0.08); color: var(--red); border: 1px solid rgba(255,95,87,0.2); cursor: pointer; font-family: var(--font); font-size: 12.5px; font-weight: 500; padding: 5px 12px; border-radius: var(--r); align-self: flex-start; transition: background .15s; }
+.btn-remove:hover { background: rgba(255,95,87,0.15); }
+.sidebar-nav { display: flex; flex-direction: column; gap: .3rem; }
+.sidebar-tab { display: flex; align-items: center; gap: .6rem; background: none; border: none; cursor: pointer; font-family: var(--font); font-size: 14px; color: var(--text2); padding: .55rem .75rem; border-radius: var(--r); text-align: left; transition: color .15s, background .15s; }
+.sidebar-tab:hover { color: var(--text); background: var(--bg3); }
+.sidebar-tab.active { color: var(--accent); background: rgba(91,140,255,0.1); font-weight: 500; }
+.dash-main { min-width: 0; display: flex; flex-direction: column; gap: 1rem; }
+.dash-hint { display: flex; align-items: center; gap: .65rem; font-size: 13.5px; color: var(--text3); background: var(--bg2); border: 1px dashed var(--border2); border-radius: var(--r); padding: .65rem 1rem; }
+@media (max-width: 700px) { .dash-inner { grid-template-columns: 1fr; } .dash-sidebar { position: static; } }

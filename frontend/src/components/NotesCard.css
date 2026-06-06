@@ -1,0 +1,37 @@
+.notes-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.notes-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 1.2rem; border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; gap: .75rem;
+}
+.notes-title { display: flex; align-items: center; gap: .55rem; }
+.notes-title h3 { font-size: 14.5px; font-weight: 600; color: var(--text); }
+.notes-actions { display: flex; gap: .5rem; }
+.btn-generate {
+  background: var(--accent2); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font); font-size: 13px; font-weight: 500;
+  padding: 6px 15px; border-radius: var(--r); transition: background .15s, transform .12s;
+}
+.btn-generate:hover:not(:disabled) { background: var(--accent); transform: translateY(-1px); }
+.btn-generate:disabled { opacity: .4; cursor: not-allowed; }
+.btn-copy {
+  background: var(--bg3); color: var(--text2); border: 1px solid var(--border2);
+  cursor: pointer; font-family: var(--font); font-size: 13px;
+  padding: 6px 13px; border-radius: var(--r); transition: color .15s, border-color .15s;
+}
+.btn-copy:hover { color: var(--text); border-color: var(--accent); }
+.notes-empty { padding: 2rem 1.5rem; text-align: center; color: var(--text3); font-size: 14px; }
+.notes-empty strong { color: var(--text2); }
+.notes-loading { display: flex; flex-direction: column; align-items: center; gap: .75rem; padding: 2.5rem; }
+.notes-loading p { font-size: 14px; color: var(--text2); }
+.spinner {
+  width: 26px; height: 26px; border: 2.5px solid var(--border2);
+  border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite;
+}
+.notes-error { padding: .85rem 1.2rem; color: var(--red); font-size: 13px; }
+.notes-body { padding: 1.1rem 1.4rem; max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: .15rem; }
+.n-h1 { font-size: 17px; font-weight: 700; color: var(--text); margin: .9rem 0 .3rem; }
+.n-h2 { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .05em; margin: .75rem 0 .25rem; }
+.n-h3 { font-size: 13.5px; font-weight: 600; color: var(--text); margin: .55rem 0 .15rem; }
+.n-p  { font-size: 13.5px; color: var(--text2); line-height: 1.65; }
+.n-li { font-size: 13.5px; color: var(--text2); margin-left: 1.2rem; list-style: disc; line-height: 1.65; }

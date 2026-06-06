@@ -1,0 +1,73 @@
+.quiz-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.quiz-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 1.2rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: .75rem;
+}
+.quiz-title { display: flex; align-items: center; gap: .55rem; }
+.quiz-title h3 { font-size: 14.5px; font-weight: 600; color: var(--text); }
+.quiz-controls { display: flex; align-items: center; gap: .75rem; }
+.quiz-num-wrap  { display: flex; align-items: center; gap: .4rem; }
+.quiz-num-label { font-size: 13px; color: var(--text2); }
+.quiz-select {
+  background: var(--bg3); border: 1px solid var(--border2); color: var(--text);
+  font-family: var(--font); font-size: 13px; padding: 4px 8px; border-radius: var(--r); cursor: pointer; outline: none;
+}
+.btn-quiz {
+  background: var(--accent2); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font); font-size: 13px; font-weight: 500;
+  padding: 6px 15px; border-radius: var(--r); transition: background .15s, transform .12s;
+}
+.btn-quiz:hover:not(:disabled) { background: var(--accent); transform: translateY(-1px); }
+.btn-quiz:disabled { opacity: .4; cursor: not-allowed; }
+.quiz-empty { padding: 2rem 1.5rem; text-align: center; color: var(--text3); font-size: 14px; }
+.quiz-empty strong { color: var(--text2); }
+.quiz-loading { display: flex; flex-direction: column; align-items: center; gap: .75rem; padding: 2.5rem; }
+.quiz-loading p { font-size: 14px; color: var(--text2); }
+.spinner { width: 26px; height: 26px; border: 2.5px solid var(--border2); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
+.quiz-error { padding: .85rem 1.2rem; color: var(--red); font-size: 13px; }
+.quiz-score {
+  display: flex; align-items: center; gap: 1rem; padding: .85rem 1.2rem;
+  border-bottom: 1px solid var(--border); background: rgba(62,207,142,0.06); flex-wrap: wrap;
+}
+.score-num   { font-size: 22px; font-weight: 700; color: var(--green); }
+.score-label { font-size: 14px; color: var(--text2); flex: 1; }
+.btn-reset {
+  background: var(--bg3); color: var(--text2); border: 1px solid var(--border2);
+  cursor: pointer; font-family: var(--font); font-size: 13px;
+  padding: 5px 13px; border-radius: var(--r); transition: color .15s, border-color .15s;
+}
+.btn-reset:hover { color: var(--text); border-color: var(--accent); }
+.quiz-body { padding: 1.1rem 1.4rem; display: flex; flex-direction: column; gap: 1.4rem; max-height: 500px; overflow-y: auto; }
+.q-block { display: flex; flex-direction: column; gap: .6rem; }
+.q-text  { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.55; }
+.q-num   { color: var(--accent); font-weight: 700; margin-right: .3rem; }
+.q-options { display: flex; flex-direction: column; gap: .4rem; }
+.q-opt {
+  display: flex; align-items: center; gap: .65rem;
+  background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--r);
+  padding: .55rem .85rem; font-family: var(--font); font-size: 13.5px;
+  color: var(--text2); cursor: pointer; text-align: left;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.q-opt:hover   { border-color: var(--accent); color: var(--text); }
+.q-opt.picked  { border-color: var(--accent); color: var(--text); background: rgba(91,140,255,0.08); }
+.q-opt.correct { border-color: var(--green); color: var(--green); background: rgba(62,207,142,0.08); }
+.q-opt.wrong   { border-color: var(--red);   color: var(--red);   background: rgba(255,95,87,0.08); }
+.opt-letter {
+  min-width: 22px; height: 22px; border-radius: 4px; background: var(--bg2);
+  border: 1px solid var(--border2); font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--text3);
+}
+.q-explanation {
+  font-size: 13px; color: var(--text2); line-height: 1.6;
+  padding: .5rem .75rem; background: var(--bg3);
+  border-radius: var(--r); border-left: 3px solid var(--accent);
+}
+.btn-submit {
+  background: var(--green); color: #0d0f14; border: none; cursor: pointer;
+  font-family: var(--font); font-size: 14px; font-weight: 600;
+  padding: .65rem 1.5rem; border-radius: var(--r); align-self: flex-start;
+  transition: opacity .15s, transform .12s;
+}
+.btn-submit:hover:not(:disabled) { opacity: .88; transform: translateY(-1px); }
+.btn-submit:disabled { opacity: .35; cursor: not-allowed; }
